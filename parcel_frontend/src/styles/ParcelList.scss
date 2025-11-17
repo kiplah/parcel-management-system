@@ -1,0 +1,136 @@
+.parcel-list {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.parcel-list h1 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.search-input, .status-filter {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-input:focus, .status-filter:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.parcels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.parcel-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.parcel-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.parcel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 1rem;
+}
+
+.parcel-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.status {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+}
+
+.status.pending { background-color: #FFB84D; }
+.status.received { background-color: #4D94FF; }
+.status.in_transit { background-color: #66BB6A; }
+.status.delivered { background-color: #4CAF50; }
+.status.lost { background-color: #F44336; }
+.status.returned { background-color: #9C27B0; }
+
+.parcel-info {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.parcel-info p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.parcel-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-small {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
+}
+
+.btn-small:hover {
+  background-color: #5568d3;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #F44336;
+  background-color: #ffebee;
+  border-radius: 5px;
+}
+
+.loading {
+  color: #667eea;
+}
